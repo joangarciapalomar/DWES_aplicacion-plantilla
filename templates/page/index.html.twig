@@ -1,5 +1,15 @@
 {% extends 'base.html.twig' %}
+{% block header %}
+	{% if app.user %}
+		<div class="mb-3 wakala" style="float: left;">
+			Eres
+			{{ app.user.userIdentifier }}
+			<button class="btn btn-primary wakala-button">
+				<a class="wakala-a" href="{{ path('app_logout') }}">Logout</a>
+			</button>
+		</div>
+	{% endif %}
+{% endblock %}
 
-{% block title %}Index plantilla{% endblock %}
-
-
+{% block title %}Index plantilla
+{% endblock %}
