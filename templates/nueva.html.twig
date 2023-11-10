@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nueva Imagen{% endblock %}
+
+{% block body %}
+    <h1>Nueva Imagen</h1>
+
+    {{ form_start(formulario) }}
+    {{ form_widget(formulario) }}
+
+    <button type="submit">Guardar</button>
+    {{ form_end(formulario) }}
+{% endblock %}
