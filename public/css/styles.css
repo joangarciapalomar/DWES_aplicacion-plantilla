@@ -10987,7 +10987,10 @@ header.masthead .masthead-heading {
   }
 }
 #portfolio .portfolio-item {
+  display: grid;
+  justify-content: center;
   max-width: 26rem;
+  min-width: 26rem;
   margin-left: auto;
   margin-right: auto;
 }

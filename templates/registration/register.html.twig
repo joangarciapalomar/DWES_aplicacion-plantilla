@@ -2,28 +2,27 @@
 
 {% block title %}Register
 {% endblock %}
+{% block background %}bg-dark
+{% endblock %}
 
 {% block body %}
-	<h1>Register</h1>
+	<h1 class="text-light">Regístrate</h1>
 
 	<div id="register">
-		<div class="container mt-5">
+		<div class="container mt-5 text-light">
 			{{ form_start(registrationForm) }}
-			{{ form_row(registrationForm.email,  {'attr': {'class':'form-control'}}) }}
-			{{ form_row(registrationForm.plainPassword,  {'attr': {'class':'form-control'}}, {
-						                label: 'Password'
-						            }) }}
-			{{ form_row(registrationForm.agreeTerms) }}
+				{{ form_row(registrationForm.email,  {'attr': {'class':'form-control'}}) }}
+				{{ form_row(registrationForm.plainPassword,  {'attr': {'class':'form-control'}}, {
+															label: 'Password'
+														}) }}
+				{{ form_row(registrationForm.agreeTerms) }}
 
-			<button type="submit" class="btn btn-primary">Register</button>
-			{{ form_end(registrationForm) }}
-			¿Ya tienes una cuenta?
-			<button class="btn btn-primary">
-				<a href="{{ path('app_login') }}" style="text-decoration: none; color: white;">Loguea</a>
-			</button>
+				<button type="submit" class="btn btn-primary">Registrarse</button>
+				{{ form_end(registrationForm) }}
+				¿Ya tienes una cuenta?
+				<button class="btn btn-primary">
+					<a href="{{ path('app_login') }}" style="text-decoration: none; color: white;">Loguea</a>
+				</button>
 		</div>
-
 	</div>
-
-	{{ form_end(registrationForm) }}
 {% endblock %}
